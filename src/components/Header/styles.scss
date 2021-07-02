@@ -1,0 +1,63 @@
+.headerComponent {
+    margin-bottom: 5rem;
+    header {
+        .content {
+            margin: 0 auto;
+            background: #9ffead;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px;
+            img {
+                max-height: 100px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+                font-size: 1.3rem;
+                font-weight: bold;
+            }
+            .switch-area {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                font-size: 0.8rem;
+                strong {
+                    color: #151515;
+                }
+
+                .switch {
+                    align-items: center;
+                    gap: 15px;
+                    span {
+                        color: #151515;
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 697px) {
+    header {
+        align-items: center;
+        justify-content: center;
+        .content {
+            display: flex;
+            flex-direction: column;
+            img {
+                max-height: 50px;
+            }
+            a {
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+}

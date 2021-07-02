@@ -1,0 +1,52 @@
+$background-color-dark: #171717;
+$background-color-light: #FEFFFF;
+$font-color-dark: #FEFFFF;
+$font-color-light: #171717;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-color-light;
+    color: $font-color-light;
+    a {
+        color: $font-color-light;
+    }
+}
+
+body.dark-mode {
+    background-color: $background-color-dark;
+    color: $font-color-dark;
+    a {
+        color:  $font-color-dark;
+    }
+}
+
+body,
+input,
+button,
+textarea {
+    font: 400 16px "Poppins", sans-serif;
+}
+
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 827px) {
+    html {
+        font-size: 90%;
+    }
+}
+// mobile
+@media (max-width: 697px) {
+    html {
+        font-size: 80%;
+    }
+}
