@@ -1,5 +1,5 @@
 .headerComponent {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
     header {
         .content {
             margin: 0 auto;
@@ -18,10 +18,14 @@
                 font-size: 1.3rem;
                 font-weight: bold;
             }
+            .active {
+                filter: opacity(0.5) ;
+            }
             .switch-area {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: center;
                 font-size: 0.8rem;
                 strong {
                     color: #151515;

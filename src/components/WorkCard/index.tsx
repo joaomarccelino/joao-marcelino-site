@@ -1,5 +1,6 @@
 import SimpleImageSlider from "react-simple-image-slider";
 import { useSwitch } from "../../contexts/SwitchContexts";
+import useWindowDimensions from "../../utils/useWindowDimensios";
 
 import './styles.scss'
 
@@ -15,7 +16,11 @@ const images = [
 
 
 
+
 export function WorkCard() {
+   
+    const { height, width } = useWindowDimensions();
+
     const {lang} = useSwitch()
     return(
         <div className={'workcard'}>
@@ -24,12 +29,11 @@ export function WorkCard() {
             </div>
             <div className="content">
                 <SimpleImageSlider
-                    width={896}
-                    height={504}
+                    width={width > height? width*0.6 :width * 0.8}
+                    height={width > height? height*0.7: height * 0.3}
                     images={images}
                     showBullets
-                    showNavs
-                    
+                    showNavs                    
                 />
             </div>
             <div className="about">

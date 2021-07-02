@@ -1,6 +1,60 @@
-.home { 
+.home {
     main {
-        max-width: 800px;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        margin-left: 15%;
+        margin-right: 15%;
+
+        .tecnologies {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .courses {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10%;
+            .certifications {
+                background: #9ffead;
+                padding: 15px;
+                p,
+                a {
+                    color: #151515;
+                }
+
+                .indent {
+                    text-indent: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 697px) {
+    .home {
+        main {
+            align-items: center;
+            justify-content: center;
+            .tecnologies {
+                align-items: center;
+                margin-bottom: 30%;
+                h1 {
+                    font-size: 1.4rem;
+                }
+                h2 {
+                    font-size: 1rem;
+                }
+            }
+            .courses {
+                margin-bottom: 30%;
+                .certifications {
+                    p,a {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
     }
 }

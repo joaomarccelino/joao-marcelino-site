@@ -12,4 +12,9 @@ const en = {
     p3: 'I believe that the time has come to enter the world of programming once and for all, and that is why I ended up creating this site to serve as a platform to expose my ideas.',
 }
 
-export { ptBr, en }
+const study = {
+    pt: 'o que estou estudando',
+    en: "what i'm studying"
+}
+
+export { ptBr, en, study }

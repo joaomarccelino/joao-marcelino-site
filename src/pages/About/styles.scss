@@ -11,7 +11,6 @@
             border-radius: 250px;
             z-index: -1;
             position: absolute;
-
         }
     }
     .text-section {
@@ -28,7 +27,7 @@
         }
         button {
             background: #9ffead;
-            padding:0.5rem;
+            padding: 0.5rem;
         }
 
         .icons-container {
@@ -37,6 +36,12 @@
             width: 100%;
             justify-content: space-evenly;
         }
+    }
+}
+
+@media (max-width: 827px) {
+    .about {
+        flex-direction: column;
     }
 }
 
@@ -53,9 +58,11 @@
         img {
             max-width: 200px;
         }
-        .decoration {
-            display: none;
+        .image-section {
+            .decoration {
+                width: 270px;
+                height: 270px;
+            }
         }
     }
-    
 }
