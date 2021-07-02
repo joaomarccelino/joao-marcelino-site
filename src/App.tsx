@@ -1,13 +1,9 @@
-import { useContext } from 'react';
-import { useEffect } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import { Header } from './components/Header';
-import { SwitchContext, SwitchContextProvider, useSwitch } from './contexts/SwitchContexts';
+import { SwitchContextProvider} from './contexts/SwitchContexts';
 import { About } from './pages/About';
 import { Home } from './pages/Home';
 import { MyWork } from './pages/MyWork';
-import usePersistedState from './utils/usePersistedState';
-
 
 function App() {
 
