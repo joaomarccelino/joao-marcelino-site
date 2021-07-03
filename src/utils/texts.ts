@@ -13,8 +13,8 @@ const en = {
 }
 
 const study = {
-    pt: 'carregando...',
-    en: "loading..."
+    pt: 'carregando',
+    en: "loading"
 }
 
 const switchTitle = {

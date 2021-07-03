@@ -5,7 +5,7 @@ import { useLocation } from 'react-router'
 import Switch from '@material-ui/core/Switch'
 import { switchTitle } from '../../utils/texts'
 import './styles.scss'
-
+import { FaRegLightbulb } from 'react-icons/fa'
 
 export function Header() {
     const { lang, theme, handleLang, handleNight } = useSwitch()
@@ -25,8 +25,14 @@ export function Header() {
                     <a className={splitLocation[1] === 'about' ? "active" : ""} href="/about">{lang === 'pt-br' ? 'sobre mim' : 'about me'}</a>
                     <a className={splitLocation[1] === 'my-work' ? "active" : ""} href="/my-work">{lang === 'pt-br' ? 'meus trabalhos' : 'my work'}</a>
                     <div className="switch-area">
+                        <a href="#" onClick={handleNight}>
+                            <FaRegLightbulb
+                                color={theme === 'dark' ? 'black' : 'yellow'}
+                                size={40}
+                            />
+                        </a>
                         <div className="switch">
-                            <strong>{lang === 'pt-br' ? switchTitle.ptLang: switchTitle.enLang}</strong>
+                            <strong>{lang === 'pt-br' ? switchTitle.ptLang : switchTitle.enLang}</strong>
                             <div>
                                 <span>en</span>
                                 <Switch
@@ -37,18 +43,8 @@ export function Header() {
                                 <span>pt</span>
                             </div>
                         </div>
-                        <div className="switch">
-                            <strong>{lang === 'pt-br' ? switchTitle.ptNight: switchTitle.enNight}</strong>
-                            <div>
-                                <span>off</span>
-                                <Switch
-                                    checked={theme === 'dark'}
-                                    onChange={handleNight}
-                                    color={'primary'}
-                                />
-                                <span>on</span>
-                            </div>
-                        </div>
+
+
                     </div>
                 </div>
             </header>
