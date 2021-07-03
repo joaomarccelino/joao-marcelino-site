@@ -10,22 +10,54 @@
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            .title{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 15px;
+                .loader {
+                    border: 8px solid #f3f3f3; /* Light grey */
+                    border-top: 8px solid #3498db; /* Blue */
+                    border-radius: 50%;
+                    width: 30px;
+                    height: 30px;
+                    animation: spin 2s linear infinite;
+                  }
+                  
+                  @keyframes spin {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                  }
+            }
         }
 
         .courses {
             display: flex;
             justify-content: flex-end;
             margin-bottom: 10%;
-            .certifications {
-                background: #9ffead;
-                padding: 15px;
-                p,
-                a {
-                    color: #151515;
+            .certification-area {
+                flex-direction: column;
+                border: 5px solid #3f3f3f;
+                .header {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    background: #3f3f3f;
+                    gap: 15px;
+                    padding: 8px;
                 }
+                .certifications {
+                    background: #9ffead;
+                    padding: 15px;
+                    p,
+                    a {
+                        color: #151515;
+                    }
 
-                .indent {
-                    text-indent: 20px;
+                    .indent {
+                        text-indent: 20px;
+                    }
                 }
             }
         }
@@ -50,7 +82,8 @@
             .courses {
                 margin-bottom: 30%;
                 .certifications {
-                    p,a {
+                    p,
+                    a {
                         font-size: 0.7rem;
                     }
                 }

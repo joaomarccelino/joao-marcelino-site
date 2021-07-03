@@ -16,7 +16,7 @@ type SwitchContextProps = {
 export const SwitchContext = createContext({} as SwitchContextType)
 
 export function SwitchContextProvider({children}: SwitchContextProps) {
-    const [lang, setLang] = usePersistedState<string>('lang', 'pt-br')
+    const [lang, setLang] = usePersistedState<string>('lang', 'en')
     const [theme, setTheme] = usePersistedState<string>('theme', 'dark')  
 
     useEffect(() => {

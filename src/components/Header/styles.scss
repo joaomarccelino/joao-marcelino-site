@@ -30,10 +30,9 @@
                 strong {
                     color: #151515;
                 }
-
                 .switch {
                     align-items: center;
-                    gap: 15px;
+                    gap: 3px;
                     span {
                         color: #151515;
                     }
@@ -53,14 +52,27 @@
         align-items: center;
         justify-content: center;
         .content {
-            display: flex;
             flex-direction: column;
+            padding: 10px;
             img {
                 max-height: 50px;
             }
             a {
                 font-size: 1.5rem;
                 margin-bottom: 2rem;
+            }
+            .switch-area{
+                flex-direction: row;           
+                .switch {
+                    display: flex;
+                    flex-direction: column;
+                    strong {
+                        font-size: 0.8rem;
+                    }
+                    span {
+                        font-size: 0.6rem;
+                    }
+                }
             }
         }
     }

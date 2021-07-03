@@ -1,6 +1,7 @@
 import ProfilePic from '../../assets/images/joao.png'
 import { FaLinkedin, FaInstagram, FaFacebook, FaGithubSquare } from 'react-icons/fa'
 
+
 import { ptBr, en } from '../../utils/texts'
 
 import './styles.scss'

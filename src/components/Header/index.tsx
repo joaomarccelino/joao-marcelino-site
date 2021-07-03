@@ -3,7 +3,7 @@ import logo from '../../assets/images/logoalt.svg'
 import { useSwitch } from '../../contexts/SwitchContexts'
 import { useLocation } from 'react-router'
 import Switch from '@material-ui/core/Switch'
-
+import { switchTitle } from '../../utils/texts'
 import './styles.scss'
 
 
@@ -20,28 +20,34 @@ export function Header() {
         <div className="headerComponent">
             <header>
                 <div className="content">
-                    <a className={splitLocation[1] === '' ? "active" : ""} href="/"><img src={logo} alt="Logo" /></a>
+                    <a href="/"><img src={logo} alt="Logo" /></a>
+                    <a className={splitLocation[1] === '' ? "active" : ""} href="/">home</a>
                     <a className={splitLocation[1] === 'about' ? "active" : ""} href="/about">{lang === 'pt-br' ? 'sobre mim' : 'about me'}</a>
                     <a className={splitLocation[1] === 'my-work' ? "active" : ""} href="/my-work">{lang === 'pt-br' ? 'meus trabalhos' : 'my work'}</a>
                     <div className="switch-area">
-                        <strong>language</strong>
                         <div className="switch">
-                            <span>en</span>
-                            <Switch
-                                checked={lang === 'pt-br'}
-                                onChange={handleLang}
-                                color={'default'}
-                            /><span>pt</span>
+                            <strong>{lang === 'pt-br' ? switchTitle.ptLang: switchTitle.enLang}</strong>
+                            <div>
+                                <span>en</span>
+                                <Switch
+                                    checked={lang === 'pt-br'}
+                                    onChange={handleLang}
+                                    color={'default'}
+                                />
+                                <span>pt</span>
+                            </div>
                         </div>
-                        <strong>nightmode</strong>
                         <div className="switch">
-                            <span>off</span>
-                            <Switch
-                                checked={theme === 'dark'}
-                                onChange={handleNight}
-                                color={'primary'}
-                            />
-                            <span>on</span>
+                            <strong>{lang === 'pt-br' ? switchTitle.ptNight: switchTitle.enNight}</strong>
+                            <div>
+                                <span>off</span>
+                                <Switch
+                                    checked={theme === 'dark'}
+                                    onChange={handleNight}
+                                    color={'primary'}
+                                />
+                                <span>on</span>
+                            </div>
                         </div>
                     </div>
                 </div>
