@@ -4,20 +4,14 @@ import useWindowDimensions from "../../utils/useWindowDimensios";
 
 import './styles.scss'
 
-
-const images = [
-    { url: "https://raw.githubusercontent.com/joaomarccelino/fit30v1/master/readmeimages/fit301.jpg"},
-    { url: "https://raw.githubusercontent.com/joaomarccelino/fit30v1/master/readmeimages/fit302.jpg"},
-    { url: "https://raw.githubusercontent.com/joaomarccelino/fit30v1/master/readmeimages/fit303.jpg"},
-    { url: "https://raw.githubusercontent.com/joaomarccelino/fit30v1/master/readmeimages/fit304.jpg"},
-    { url: "https://raw.githubusercontent.com/joaomarccelino/fit30v1/master/readmeimages/fit305.jpg"},
-    { url: "https://raw.githubusercontent.com/joaomarccelino/fit30v1/master/readmeimages/fit306.jpg"},  
-]
+type WorkCardProps = {
+    title: string;
+    images: {url: string}[];
+    gitLink: string;
+}
 
 
-
-
-export function WorkCard() {
+export function WorkCard({title, images, gitLink}: WorkCardProps) {
    
     const { height, width } = useWindowDimensions();
 
@@ -25,7 +19,7 @@ export function WorkCard() {
     return(
         <div className={'workcard'}>
             <div className="title-container">
-                <h1>fit30</h1>
+                <h1>{title}</h1>
             </div>
             <div className="content">
                 <SimpleImageSlider
@@ -37,7 +31,7 @@ export function WorkCard() {
                 />
             </div>
             <div className="about">
-                <a href="https://github.com/joaomarccelino/fit30v1"><strong>{lang === 'pt-br' ? 'Link para o projeto' : 'Link to the project'}</strong></a>
+                <a href={gitLink}><strong>{lang === 'pt-br' ? 'Link para o projeto' : 'Link to the project'}</strong></a>
             </div>
         </div>
     )
