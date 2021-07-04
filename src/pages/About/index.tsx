@@ -1,6 +1,6 @@
 import ProfilePic from '../../assets/images/joao.png'
 import { FaLinkedin, FaInstagram, FaFacebook, FaGithubSquare } from 'react-icons/fa'
-
+import { HiMail } from 'react-icons/hi'
 
 import { ptBr, en } from '../../utils/texts'
 
@@ -27,7 +27,7 @@ export function About() {
                 </div>
                 <a href="mailto:joao.marcelino.esc@gmail.com">
                     <button>
-                        mail-me
+                        <HiMail size={50}/>
                     </button>
                 </a>
 

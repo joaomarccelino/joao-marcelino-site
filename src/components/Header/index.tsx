@@ -25,12 +25,12 @@ export function Header() {
                     <a className={splitLocation[1] === 'about' ? "active" : ""} href="/about">{lang === 'pt-br' ? 'sobre mim' : 'about me'}</a>
                     <a className={splitLocation[1] === 'my-work' ? "active" : ""} href="/my-work">{lang === 'pt-br' ? 'meus trabalhos' : 'my work'}</a>
                     <div className="switch-area">
-                        <a href="#" onClick={handleNight}>
+                        <button onClick={handleNight}>
                             <FaRegLightbulb
                                 color={theme === 'dark' ? 'black' : 'yellow'}
                                 size={40}
                             />
-                        </a>
+                        </button>
                         <div className="switch">
                             <strong>{lang === 'pt-br' ? switchTitle.ptLang : switchTitle.enLang}</strong>
                             <div>

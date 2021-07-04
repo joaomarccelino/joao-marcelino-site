@@ -27,7 +27,15 @@
         }
         button {
             background: #9ffead;
+            display: flex;
+            align-items: center;
+            max-height: 3rem;
+            width: 5rem;
+            border: none;
+            border-radius: 9%;
             padding: 0.5rem;
+            cursor: pointer;
+            justify-content: center;
         }
         .title-container {
             margin-bottom: 25px;
