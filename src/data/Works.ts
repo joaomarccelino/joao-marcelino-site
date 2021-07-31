@@ -1,5 +1,13 @@
 export const works = [
     {
+        name: 'world açai',
+        images: [
+            { url: "https://raw.githubusercontent.com/joaomarccelino/worldacai/blob/master/git-image/tela1.png" },
+            { url: "https://raw.githubusercontent.com/joaomarccelino/worldacai/blob/master/git-image/tela2.png" },
+        ],
+        gitLink: "https://github.com/joaomarccelino/worldacai"
+    },
+    {
         name: 'fit30',
         images: [
             { url: "https://raw.githubusercontent.com/joaomarccelino/fit30v1/master/readmeimages/fit301.jpg" },
