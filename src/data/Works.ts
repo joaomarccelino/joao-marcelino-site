@@ -2,8 +2,8 @@ export const works = [
     {
         name: 'world açai',
         images: [
-            { url: "https://github.com/joaomarccelino/worldacai/blob/master/git-image/tela1.png" },
-            { url: "https://github.com/joaomarccelino/worldacai/blob/master/git-image/tela2.png" },
+            { url: "https://raw.githubusercontent.com/joaomarccelino/worldacai/master/git-image/tela1.png" },
+            { url: "https://raw.githubusercontent.com/joaomarccelino/worldacai/master/git-image/tela2.png" },
         ],
         gitLink: "https://github.com/joaomarccelino/worldacai"
     },
